@@ -47,6 +47,7 @@
 
      ```java
      KeyAuth keyAuthAPI = new KeyAuth("your_app_name", "your_owner_id", "your_version");
+     keyAuthAPI.init()
      ```
 
 3. **Usage:**
