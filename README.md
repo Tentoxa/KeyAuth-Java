@@ -7,6 +7,7 @@
 -  Secure and modern libraries to minimize vulnerabilities.
 -  Efficient session checking using background threads for optimal performance.
 -  Easy-to-use object-based results for simplified handling.
+-  Using latest KeyAuth api.
 
 **Future Plans:**
 -  Add License Key Login / Register
