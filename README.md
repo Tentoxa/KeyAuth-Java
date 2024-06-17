@@ -4,7 +4,7 @@
 
 ### Features:
 - Utilizes modern libraries to ensure security and mitigate vulnerabilities.
-- Threaded session checking for efficient checking sessions.
+- Check sessions using a thread efficiently for optimal performance.
 - Simplified result handling using objects for ease of use.
 
 ### Additional Information:
