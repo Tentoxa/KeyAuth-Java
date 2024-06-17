@@ -4,11 +4,11 @@
 
 ### Features:
 - Utilizes modern libraries to ensure security and mitigate vulnerabilities.
-- Threaded session checking for efficient operation.
+- Threaded session checking for efficient checking sessions.
 - Simplified result handling using objects for ease of use.
 
 ### Additional Information:
-- **No encryption** is applied to the data flow.
+- **No encryption** is applied to the data flow. This may be added in future
 
 ### Getting Started
 To integrate **KeyAuth-JAVA-API** into your project, follow these steps:
