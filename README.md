@@ -1,34 +1,68 @@
-# KeyAuth-JAVA-API Remastered
+#  KeyAuth-JAVA-API Remastered
 
-**KeyAuth-JAVA-API** is a Java library designed for seamless integration of [KeyAuth](https://keyauth.cc/) into your applications.
+**KeyAuth-JAVA-API Remastered** is a Java library that simplifies integration of the [KeyAuth](https://keyauth.cc/) authentication system into your applications. 
 
-### Features:
-- Utilizes modern libraries to ensure security and mitigate vulnerabilities.
-- Check sessions using a thread efficiently for optimal performance.
-- Simplified result handling using objects for ease of use.
+**Key Features:**
 
-### Additional Information:
-- **No encryption** is applied to the data flow. This may be added in future
+-  Secure and modern libraries to minimize vulnerabilities.
+-  Efficient session checking using background threads for optimal performance.
+-  Easy-to-use object-based results for simplified handling.
 
-### Getting Started
-To integrate **KeyAuth-JAVA-API** into your project, follow these steps:
+**Important Note:**
 
-1. **Installation**: Add the library to your project dependencies.
+- ⚠️ **No data encryption** is currently implemented.
 
-2. **Initialization**: Initialize the API with your KeyAuth credentials.
-```java
-KeyAuth keyAuthAPI = new KeyAuth(appname, ownerid, version);
-```
+**Getting Started:**
 
-3. **Usage**: Start using the API to authenticate users and manage sessions.
-```java
-LoginResult result = keyAuthAPI.login(username, password);
-if(result.isSuccess()){
-    System.out.println("Login successful!");
-} else {
-    System.out.println("Login failed: " + result.getMessage());
-}
+1. **Installation (Maven):**
 
-// Start a background thread to periodically check and maintain session validity every x milliseconds
-keyAuthAPI.startSessionCheckerThread(10000);
-```
+   - Add the jitpack.io repository to your `pom.xml`:
+
+     ```xml
+     <repositories>
+         <repository>
+             <id>jitpack.io</id>
+             <url>https://jitpack.io</url>
+         </repository>
+     </repositories>
+     ```
+
+   - Add the KeyAuth-Java dependency:
+
+     ```xml
+     <dependency>
+         <groupId>com.github.Tentoxa</groupId>
+         <artifactId>KeyAuth-Java</artifactId>
+         <version>1.0</version>
+     </dependency>
+     ```
+
+2. **Initialization:**
+
+   - Create a `KeyAuth` object using your KeyAuth credentials:
+
+     ```java
+     KeyAuth keyAuthAPI = new KeyAuth("your_app_name", "your_owner_id", "your_version");
+     ```
+
+3. **Usage:**
+
+   - **Login:**
+
+     ```java
+     LoginResult result = keyAuthAPI.login(username, password);
+
+     if (result.isSuccess()) {
+         System.out.println("Login successful! ");
+     } else {
+         System.out.println("Login failed: " + result.getMessage() + " ");
+     }
+     ```
+
+   - **Session Checking:**
+
+     - **Recommended:** Use a background thread to periodically check session validity:
+
+       ```java
+       keyAuthAPI.startSessionCheckerThread(10000); // Check every 10 seconds
+       ```
