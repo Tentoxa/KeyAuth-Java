@@ -8,6 +8,9 @@
 -  Efficient session checking using background threads for optimal performance.
 -  Easy-to-use object-based results for simplified handling.
 
+**Future Plans:**
+-  Add License Key Login / Register
+
 **Important Note:**
 
 - ⚠️ **No data encryption** is currently implemented.
