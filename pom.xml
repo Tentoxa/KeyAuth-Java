@@ -14,13 +14,6 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
-
 
     <dependencies>
         <!-- OkHTTP library -->
@@ -30,6 +23,7 @@
             <version>4.12.0</version>
         </dependency>
 
+        <!-- Lombok library -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -37,6 +31,7 @@
             <scope>provided</scope>
         </dependency>
 
+        <!-- Gson library -->
         <dependency>
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
@@ -48,6 +43,8 @@
 
     <build>
         <plugins>
+
+            <!-- Maven Shade Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-shade-plugin</artifactId>
