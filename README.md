@@ -9,6 +9,25 @@
 -  Easy-to-use object-based results for simplified handling.
 -  Using latest KeyAuth api.
 
+### API Features Implemented
+
+1. **Authentication:**
+   - Initiate session
+   - Log in with username and password
+   - Log in using license key
+
+2. **User Management:**
+   - Register new user (username, password, license key, email)
+   - Log out
+   - Ban logged-in user
+
+3. **Logging and Monitoring:**
+   - Create log entry
+   - Fetch application statistics
+
+4. **Configuration and Data Retrieval:**
+   - Fetch global variables
+
 **Future Plans:**
 -  Add License Key Login / Register
 
